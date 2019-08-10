@@ -1,5 +1,28 @@
 // 封装按需引入 Element
-import { Button,Select, Option, OptionGroup, Input, Tree, Dialog, Row, Col } from 'element-ui'
+import { Button,
+           Main,
+           Select,
+           Option,
+           OptionGroup,
+           Menu,
+           Icon,
+           Submenu,
+           MenuItemGroup,
+           MenuItem,
+           Tree,
+           Dialog,
+           Input, 
+           Row, 
+           Col ,
+           Container, 
+           Header,
+           Aside, 
+           Footer,
+           DropdownItem,
+           Tooltip,
+           Dropdown,
+           DropdownMenu,
+  } from 'element-ui'
  const element = {
   install: function (Vue) {
     Vue.use(Select)
@@ -11,6 +34,21 @@ import { Button,Select, Option, OptionGroup, Input, Tree, Dialog, Row, Col } fro
     Vue.use(Row)
     Vue.use(Col)
     Vue.use(Button)
+    Vue.use(Container)
+    Vue.use(Header)
+    Vue.use(Aside)
+    Vue.use(Footer)
+    Vue.use(Main)
+    Vue.use(Menu)
+    Vue.use(Submenu)
+    Vue.use(MenuItemGroup)
+    Vue.use(MenuItem)
+    Vue.use(Icon)
+    Vue.use(DropdownItem)
+    Vue.use(Tooltip)
+    Vue.use(Dropdown)
+    Vue.use(DropdownMenu)
+    Vue.use(Tooltip)
   }
  }
  export default element
