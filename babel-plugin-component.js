@@ -22,6 +22,8 @@ import { Button,
            Tooltip,
            Dropdown,
            DropdownMenu,
+           FormItem,
+           Form,
   } from 'element-ui'
  const element = {
   install: function (Vue) {
@@ -48,7 +50,8 @@ import { Button,
     Vue.use(Tooltip)
     Vue.use(Dropdown)
     Vue.use(DropdownMenu)
-    Vue.use(Tooltip)
+    Vue.use(FormItem)
+    Vue.use(Form)
   }
  }
  export default element

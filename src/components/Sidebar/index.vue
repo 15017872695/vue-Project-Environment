@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-        <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#324157"
+        <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse"  background-color="#324157"
             text-color="#bfcbd9" active-text-color="#20a0ff" unique-opened router>
             <template v-for="item in items">
                 <template v-if="item.subs">
@@ -40,89 +40,89 @@
                 items: [
                     {
                         icon: 'el-icon-s-home',
-                        index: 'dashboard',
+                        index: 'home',
                         title: '系统首页'
                     },
                     {
                         icon: 'el-icon-menu',
-                        index: 'table',
+                        index: 'home/table',
                         title: '基础表格'
                     },
                     {
                         icon: 'el-icon-document-copy',
-                        index: 'tabs',
+                        index: 'home/tabs',
                         title: 'tab选项卡'
                     },
-                    {
+                    { 
                         icon: 'el-icon-document',
-                        index: '3',
+                        index: 'home/from',
                         title: '表单相关',
                         subs: [
                             {
-                                index: 'form',
+                                index: 'home/from/basicForm',
                                 title: '基本表单'
                             },
                             {
-                                index: '3-2',
+                                index: 'home/levelMenu',
                                 title: '三级菜单',
                                 subs: [
                                     {
-                                        index: 'editor',
+                                        index: 'home/levelMenu/richTextEditor',
                                         title: '富文本编辑器'
                                     },
                                     {
-                                        index: 'markdown',
-                                        title: 'markdown编辑器'
+                                        index: 'home/levelMenu/markdown',
+                                        title: 'markdown'
                                     },
                                 ]
                             },
                             {
-                                index: 'upload',
+                                index: 'home/from/upload',
                                 title: '文件上传'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-star-off',
-                        index: 'icon',
+                        index: 'home/icon',
                         title: '自定义图标'
                     },
                     {
                         icon: 'el-icon-pie-chart',
-                        index: 'charts',
+                        index: 'home/charts',
                         title: 'schart图表'
                     },
                     {
                         icon: 'el-icon-rank',
-                        index: '6',
+                        index: 'home/dragComponent',
                         title: '拖拽组件',
                         subs: [
                             {
-                                index: 'drag',
+                                index: 'home/dragComponent/drag',
                                 title: '拖拽列表',
                             },
                             {
-                                index: 'dialog',
+                                index: 'home/dragComponent/dialog',
                                 title: '拖拽弹框',
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-collection-tag',
-                        index: 'i18n',
+                        index: 'home/i18n',
                         title: '国际化功能'
                     },
                     {
                         icon: 'el-icon-warning-outline',
-                        index: '7',
+                        index: 'home/errorHandling',
                         title: '错误处理',
                         subs: [
                             {
-                                index: 'permission',
+                                index: 'home/errorHandling/permission',
                                 title: '权限测试'
                             },
                             {
-                                index: '404',
+                                index: 'notFoundComponent',
                                 title: '404页面'
                             }
                         ]
@@ -130,7 +130,7 @@
                     ,
                     {
                         icon: 'el-icon-cold-drink',
-                        index: '/donate',
+                        index: 'home/donate',
                         title: '支持作者'
                     }
                 ]
@@ -152,20 +152,19 @@
 
 <style scoped>
     .sidebar{
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0px;
-        bottom:0;
-        overflow-y: scroll;
+
+        height:100%;
     }
     .sidebar::-webkit-scrollbar{
         width: 0;
     }
     .sidebar-el-menu:not(.el-menu--collapse){
-        width: 249px;
+        width: 250px;
     }
     .sidebar > ul {
         height:100%;
+    }
+    .el-menu{
+        border: none;
     }
 </style>

@@ -53,6 +53,7 @@
                 name: 'linxin',
                 message: 2
             }
+            
         },
         computed: {
             username() {
