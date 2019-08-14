@@ -40,85 +40,85 @@
                 items: [
                     {
                         icon: 'el-icon-s-home',
-                        index: 'home',
+                        index: 'dashboard',
                         title: '系统首页'
                     },
                     {
                         icon: 'el-icon-menu',
-                        index: 'home/table',
+                        index: 'table',
                         title: '基础表格'
                     },
                     {
                         icon: 'el-icon-document-copy',
-                        index: 'home/tabs',
+                        index: 'tabs',
                         title: 'tab选项卡'
                     },
                     { 
                         icon: 'el-icon-document',
-                        index: 'home/from',
+                        index: 'from',
                         title: '表单相关',
                         subs: [
                             {
-                                index: 'home/from/basicForm',
+                                index: 'basicForm',
                                 title: '基本表单'
                             },
                             {
-                                index: 'home/levelMenu',
+                                index: 'levelMenu',
                                 title: '三级菜单',
                                 subs: [
                                     {
-                                        index: 'home/levelMenu/richTextEditor',
+                                        index: 'richTextEditor',
                                         title: '富文本编辑器'
                                     },
                                     {
-                                        index: 'home/levelMenu/markdown',
+                                        index: 'markdown',
                                         title: 'markdown'
                                     },
                                 ]
                             },
                             {
-                                index: 'home/from/upload',
+                                index: 'upload',
                                 title: '文件上传'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-star-off',
-                        index: 'home/icon',
+                        index: 'icon',
                         title: '自定义图标'
                     },
                     {
                         icon: 'el-icon-pie-chart',
-                        index: 'home/charts',
+                        index: 'charts',
                         title: 'schart图表'
                     },
                     {
                         icon: 'el-icon-rank',
-                        index: 'home/dragComponent',
+                        index: 'dragComponent',
                         title: '拖拽组件',
                         subs: [
                             {
-                                index: 'home/dragComponent/drag',
+                                index: 'drag',
                                 title: '拖拽列表',
                             },
                             {
-                                index: 'home/dragComponent/dialog',
+                                index: 'dialog',
                                 title: '拖拽弹框',
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-collection-tag',
-                        index: 'home/i18n',
+                        index: 'i18n',
                         title: '国际化功能'
                     },
                     {
                         icon: 'el-icon-warning-outline',
-                        index: 'home/errorHandling',
+                        index: 'errorHandling',
                         title: '错误处理',
                         subs: [
                             {
-                                index: 'home/errorHandling/permission',
+                                index: 'permission',
                                 title: '权限测试'
                             },
                             {
@@ -130,7 +130,7 @@
                     ,
                     {
                         icon: 'el-icon-cold-drink',
-                        index: 'home/donate',
+                        index: 'donate',
                         title: '支持作者'
                     }
                 ]

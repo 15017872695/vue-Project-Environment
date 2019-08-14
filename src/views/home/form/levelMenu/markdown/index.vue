@@ -1,6 +1,6 @@
 <template>
     <div>
-        markdown
+        markdown编辑器
     </div>
 </template>
 <script>

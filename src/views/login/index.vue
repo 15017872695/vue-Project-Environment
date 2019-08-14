@@ -5,7 +5,7 @@
                 <img src="@/assets/img/HTMLicon.png" alt="" style="width:20%;margin-top:45px;margin-bottom:25px;">
                 <el-input placeholder="请输入用户名" v-model="input" autocomplete="off" clearable></el-input>
                 <el-input placeholder="请输入密码" v-model="password" autocomplete="off" show-password></el-input>
-                <el-button type="primary" :loading="loginBln">登录</el-button>
+                <el-button type="primary" :loading="loginBln" @click='goHome'>登录</el-button>
                 <div class="zhuce">
                     <span>注 册</span>
                 </div>
@@ -22,7 +22,13 @@
                 password: '',
                 loginBln: false
             }
-        }
+        },
+        methods: {
+            goHome:function(){
+                debugger
+                this.$router.push({path:'/dashboard'})
+            }
+        },
     }
 </script>
 <style scoped lang="scss">
