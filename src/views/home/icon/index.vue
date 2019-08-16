@@ -1,6 +1,6 @@
 <template>
     <div>
-        基础表格
+        自定义图标
     </div>
 </template>
 <script>

@@ -2,7 +2,9 @@
     <div class="header">
         <!-- 折叠按钮 -->
         <div class="collapse-btn" @click="collapseChage">
-            <i class="el-icon-menu"></i>
+            <el-tooltip class="item" effect="dark" content="展开 / 收缩" placement="bottom">
+                <i class="el-icon-menu"></i>
+            </el-tooltip>
         </div>
         <div class="logo">Vue项目环境配置标准版-后台管理系统</div>
         <div class="header-right">
@@ -23,7 +25,7 @@
                     <span class="btn-bell-badge" v-if="message"></span>
                 </div>
                 <!-- 用户头像 -->
-                <div class="user-avator"><img src="../../assets/logo.png"></div>
+                <div class="user-avator"><img src="../../assets/img/HTMLicon.png"></div>
                 <!-- 用户名下拉菜单 -->
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
                     <span class="el-dropdown-link">
@@ -53,7 +55,7 @@
                 name: 'linxin',
                 message: 2
             }
-            
+
         },
         computed: {
             username() {
@@ -119,19 +121,22 @@
         color: #fff;
         background: #242f42;
     }
-    .header>div{
-        height:100%;
+
+    .header>div {
+        height: 100%;
         line-height: 0;
-        display:flex;
-        align-items:center;
+        display: flex;
+        align-items: center;
         justify-content: center;
     }
+
     .collapse-btn {
         float: left;
         padding: 0 21px;
         cursor: pointer;
         line-height: 70px;
     }
+
     .header .logo {
         float: left;
         width: auto;

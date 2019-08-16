@@ -1,11 +1,11 @@
 <template>
     <div>
-        基础表格
+        国际化
     </div>
 </template>
 <script>
 export default {
-    name:'table'
+    name:'i18n'
 }
 </script>
 <style scope>

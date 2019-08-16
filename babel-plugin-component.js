@@ -24,6 +24,8 @@ import { Button,
            DropdownMenu,
            FormItem,
            Form,
+           Breadcrumb,
+           BreadcrumbItem,
   } from 'element-ui'
  const element = {
   install: function (Vue) {
@@ -52,6 +54,8 @@ import { Button,
     Vue.use(DropdownMenu)
     Vue.use(FormItem)
     Vue.use(Form)
+    Vue.use(BreadcrumbItem)
+    Vue.use(Breadcrumb)
   }
  }
  export default element

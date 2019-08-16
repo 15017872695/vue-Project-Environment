@@ -10,31 +10,31 @@
         
         <div class='containerWapper'>
             <el-row :gutter="10" style="margin:0px;height:100%;">
-                    <el-col style="height:100%;">
-                        <div class="grid-content bg-purple-light">
-                            <Sidebar></Sidebar>
+                <el-col style="height:100%;">
+                    <div class="grid-content bg-purple-light">
+                        <Sidebar></Sidebar>
+                    </div>
+                </el-col>
+            </el-row> 
+            <el-row :gutter="10" style="margin:0px;height:100%;width: 100%;">
+                <el-col :span="24" style="height:93%;">
+                    <div class="grid-content bg-purple-dark" style="height:100%;width: 100%;">
+                        <Container-Top-NavBar></Container-Top-NavBar>
+                        <!-- 主内容出口 -->
+                        <div class='ContainerCenter'>
+                            <keep-alive>
+                                <router-view></router-view>
+                            </keep-alive>
                         </div>
-                    </el-col>
-                </el-row> 
-                <el-row :gutter="10" style="margin:0px;height:100%;width: 100%;">
-                    <el-col :span="24" style="height:93%;">
-                        <div class="grid-content bg-purple-dark" style="height:100%;width: 100%;">
-                            <Container-Top-NavBar></Container-Top-NavBar>
-                            <!-- 主内容出口 -->
-                            <div class='ContainerCenter'>
-                                <keep-alive>
-                                    <router-view></router-view>
-                                </keep-alive>
-                            </div>
-                        </div>
-                    </el-col>
-                    <el-col :span="24" style="height:7%;border-top:1px solid #eee;">
-                        <div class="grid-content bg-purple-dark bg-purple-darkTwo">
-                            <span>本系统由私人开发</span>
-                            <span>Vue项目环境配置标准版-后台管理系统©2019/8/12</span>
-                        </div>
-                    </el-col>
-                </el-row>
+                    </div>
+                </el-col>
+                <el-col :span="24" style="height:7%;border-top:1px solid #eee;">
+                    <div class="grid-content bg-purple-dark bg-purple-darkTwo">
+                        <span>本系统由私人开发</span>
+                        <span>Vue项目环境配置标准版-后台管理系统©2019/8/12</span>
+                    </div>
+                </el-col>
+            </el-row>
         </div>
     </div>
 </template>

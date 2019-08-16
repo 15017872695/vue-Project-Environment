@@ -16,4 +16,11 @@ export default{
             method:'get',
         })
     },
+     // 获取微信SDK数据
+     getWXSDKInfo (){
+        return request({
+            url:'http://hyfpc.fangcuanhuoxitong.com/MobileApi/BaseParam/GetWxConfig',
+            method:'get',
+        })
+    },
 }

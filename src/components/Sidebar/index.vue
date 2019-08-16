@@ -40,7 +40,7 @@
                 items: [
                     {
                         icon: 'el-icon-s-home',
-                        index: 'dashboard',
+                        index: 'home',
                         title: '系统首页'
                     },
                     {
