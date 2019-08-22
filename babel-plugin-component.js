@@ -1,5 +1,5 @@
 // 封装按需引入 Element
-import { Button,
+import {   Button,
            Main,
            Select,
            Option,
@@ -26,6 +26,10 @@ import { Button,
            Form,
            Breadcrumb,
            BreadcrumbItem,
+           Card,
+           Progress,
+           Table,
+           TableColumn,
   } from 'element-ui'
  const element = {
   install: function (Vue) {
@@ -55,7 +59,11 @@ import { Button,
     Vue.use(FormItem)
     Vue.use(Form)
     Vue.use(BreadcrumbItem)
-    Vue.use(Breadcrumb)
+    Vue.use(Breadcrumb) 
+    Vue.use(Card)
+    Vue.use(Progress)
+    Vue.use(Table)
+    Vue.use(TableColumn)
   }
  }
  export default element

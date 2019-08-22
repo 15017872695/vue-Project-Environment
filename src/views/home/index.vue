@@ -17,23 +17,23 @@
                 </el-col>
             </el-row> 
             <el-row :gutter="10" style="margin:0px;height:100%;width: 100%;">
-                <el-col :span="24" style="height:93%;">
+                <el-col :span="24" style="height:100%;">
                     <div class="grid-content bg-purple-dark" style="height:100%;width: 100%;">
                         <Container-Top-NavBar></Container-Top-NavBar>
-                        <!-- 主内容出口 -->
                         <div class='ContainerCenter'>
+                            <!-- 系统首页主内容路由出口 -->
                             <keep-alive>
                                 <router-view></router-view>
                             </keep-alive>
                         </div>
                     </div>
                 </el-col>
-                <el-col :span="24" style="height:7%;border-top:1px solid #eee;">
+                <!-- <el-col :span="24" style="height:7%;border-top:1px solid #eee;">
                     <div class="grid-content bg-purple-dark bg-purple-darkTwo">
                         <span>本系统由私人开发</span>
                         <span>Vue项目环境配置标准版-后台管理系统©2019/8/12</span>
                     </div>
-                </el-col>
+                </el-col> -->
             </el-row>
         </div>
     </div>
@@ -44,14 +44,32 @@
     import ContainerTopNavBar from '@/components/ContainerTopNavBar'
     export default {
         name: 'home',
+        data:function(){
+            return{
+                xitongHomeBLN:true
+            }
+        },
         methods: {
-
+            homeRoute:function(){
+                if(this.$route.matched[1].path !== this.$route.path){
+                    this.xitongHomeBLN = false
+                }
+            }
+        },
+        created() {
+            console.log(this.$route)
+            this.homeRoute();
         },
         components: {
             Sidebar,
             Header,
             ContainerTopNavBar,
-        }
+        },
+        watch: {
+            $route(to,from){
+                this.homeRoute();
+            }
+        },
     }
 </script>
 <style scoped lang="scss">
@@ -92,6 +110,9 @@
     .ContainerCenter{
         width: 100%;
         height:95.5%;
+        padding:20px;
+        box-sizing: border-box;
+        background:#f5f5f5;
     }
     .bg-purple-darkTwo{
        display:flex;
@@ -105,4 +126,5 @@
     .bg-purple-darkTwo span:nth-child(2){
         margin-top: 10px;
     }
+    
 </style>

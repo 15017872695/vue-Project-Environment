@@ -57,7 +57,7 @@
             },
             // 设置标签
             setTags(route){
-                console.log(route)
+                
                 const isExist = this.tagsList.some(item => {
                     return item.path === route.fullPath;
                 })
@@ -84,7 +84,7 @@
         },
         watch:{
             $route(newValue, oldValue){
-                console.log(newValue)
+                
                 this.setTags(newValue);
             }
         },
@@ -201,5 +201,14 @@
 <style>
      .tags-li:not(.active):hover {
         background: #f8f8f8;
+    }
+    .tags ul{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    .tags-li{
+        margin-top:1px !important;
     }
 </style>

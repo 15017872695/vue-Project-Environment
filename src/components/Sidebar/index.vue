@@ -40,7 +40,7 @@
                 items: [
                     {
                         icon: 'el-icon-s-home',
-                        index: 'home',
+                        index: 'dashboard',
                         title: '系统首页'
                     },
                     {
@@ -72,7 +72,7 @@
                                     },
                                     {
                                         index: 'markdown',
-                                        title: 'markdown'
+                                        title: 'markdown编辑器'
                                     },
                                 ]
                             },

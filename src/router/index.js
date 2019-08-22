@@ -14,13 +14,13 @@ export default new Router({
       path: '/home', 
       name:'home',
       component: resolve => require(['@/views/home'],resolve),
-      meta:{title:'自述文件'},//配置路由元信息
+      meta:{title:'首页'},
       children:[//children配置子路由
         {
           path:'/dashboard',
           name:'dashboard',
           component:resolve => require(['@/views/home/dashboard'],resolve),
-          meta:{title:'系统首页'}
+          meta:{title:'系统首页'}//配置路由元信息
         },
         {
           path:'/icon',
