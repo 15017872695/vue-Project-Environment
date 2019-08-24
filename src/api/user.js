@@ -23,4 +23,12 @@ export default{
             method:'get',
         })
     },
+    // table页面数据获取
+    getTableData(queryPage){
+        return request({
+            url:'https://www.easy-mock.com/mock/592501a391470c0ac1fab128/ms/table/list',
+            method:'post',
+            data:queryPage
+        })
+    } 
 }

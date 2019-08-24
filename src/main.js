@@ -10,12 +10,17 @@ import wx from  'weixin-js-sdk';
 import echarts from 'echarts';
 
 Vue.use(element)
+
 config.baseURL;  // 对应环境api
+
 Vue.config.productionTip = false;
+
 Vue.prototype.wx = wx;
-Vue.prototype.$echarts = echarts
-Vue.use(echarts)
-console.log(wx)
+
+Vue.prototype.$echarts = echarts;
+
+Vue.use(echarts);
+
 
 // 全局路由守卫(全局控制登录)
 // router.beforeEach((to, from, next) => {

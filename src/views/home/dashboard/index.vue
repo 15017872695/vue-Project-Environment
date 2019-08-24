@@ -77,7 +77,7 @@
             </el-col>
         </el-row>
         <!-- 底部图表展示栏 -->
-        <el-row :gutter="20" style='width:100%;height:auto;'>
+        <el-row :gutter="20" style='width:100%;height:auto;margin-left:0px;'>
             <!-- 部分管理层人员列表 -->
             <el-col :span="12">
                 <el-card shadow="hover" class='homeUserDiagram'>
@@ -118,7 +118,7 @@
                         <el-table-column prop="address" label="地址" show-overflow-tooltip>
                         </el-table-column>
                     </el-table>
-                    <div style="margin-top: 20px">
+                    <div style="padding:0px 0px 10px 20px;box-sizing: border-box;margin-top:10px;">
                         <el-button @click="toggleSelection()" plain>取消选择</el-button>
                         <el-button @click="toggleDelect()" type="danger">删除</el-button>
                     </div>
@@ -149,6 +149,20 @@
                 }, {
                     date: '2016-05-08',
                     name: '长子·小余',
+                    province: '广东',
+                    city: '深圳',
+                    address: '在那悠远的地方~',
+                    zip: 200333
+                }, {
+                    date: '2016-05-08',
+                    name: '闺女·余小',
+                    province: '广东',
+                    city: '深圳',
+                    address: '在那悠远的地方~',
+                    zip: 200333
+                }, {
+                    date: '2016-05-08',
+                    name: '小长子·小余小',
                     province: '广东',
                     city: '深圳',
                     address: '在那悠远的地方~',
@@ -346,7 +360,7 @@
     }
 
     .homeTopUserDashboard {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.4rem;
     }
 
     .homeTopUserInfo {
@@ -508,8 +522,9 @@
         margin-left: 5px !important;
     }
 
-    .homeUserDiagram .el-card__body {
-        height: 250px;
+    .homeUserDiagram .el-card__body,.homeUserLineChart .el-card__body{
+        height: auto;
         overflow-y: auto;
+        padding:0px !important;
     }
 </style>

@@ -16,7 +16,7 @@
                     </div>
                 </el-col>
             </el-row> 
-            <el-row :gutter="10" style="margin:0px;height:100%;width: 100%;">
+            <el-row :gutter="10" style="margin:0px;height:100%;width: 100%;overflow-y: hidden;">
                 <el-col :span="24" style="height:100%;">
                     <div class="grid-content bg-purple-dark" style="height:100%;width: 100%;">
                         <Container-Top-NavBar></Container-Top-NavBar>
@@ -88,6 +88,7 @@
         width: 100%;
         height:93%;
         display:flex;
+        
     }
     .el-aside{
         position: relative;
@@ -113,6 +114,7 @@
         padding:20px;
         box-sizing: border-box;
         background:#f5f5f5;
+        overflow-y: auto;
     }
     .bg-purple-darkTwo{
        display:flex;

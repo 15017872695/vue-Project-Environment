@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 // 封装按需引入 Element
 import {   Button,
            Main,
@@ -30,6 +32,19 @@ import {   Button,
            Progress,
            Table,
            TableColumn,
+           Tag,
+           Pagination,
+           Message,
+           DatePicker,
+           Tabs,
+           TabPane,
+           Checkbox,
+           Radio,
+           Switch,
+           TimePicker,
+           CheckboxGroup,
+           RadioGroup,
+           Upload,
   } from 'element-ui'
  const element = {
   install: function (Vue) {
@@ -64,6 +79,21 @@ import {   Button,
     Vue.use(Progress)
     Vue.use(Table)
     Vue.use(TableColumn)
+    Vue.use(Tag)
+    Vue.use(Pagination)
+    Vue.use(Message)
+    Vue.use(DatePicker)
+    Vue.use(Tabs)
+    Vue.use(TabPane)
+    Vue.use(Checkbox)
+    Vue.use(Radio)
+    Vue.use(Switch)
+    Vue.use(TimePicker)
+    Vue.use(CheckboxGroup)
+    Vue.use(RadioGroup)
+    Vue.use(Upload)
   }
  }
  export default element
+
+ Vue.prototype.$message = Message
