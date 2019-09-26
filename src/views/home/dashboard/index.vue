@@ -10,7 +10,7 @@
                             <img src="@/assets/img/HTMLicon.png" alt="">
                         </el-col>
                         <el-col :span="12">
-                            <span>HongQuan-Yu</span>
+                            <span>先森·余</span>
                             <span>超级管理员</span>
                         </el-col>
                     </div>

@@ -32,7 +32,7 @@
                         {{username}} <i class="el-icon-caret-bottom"></i>
                     </span>
                     <el-dropdown-menu slot="dropdown">
-                        <a href="http://bk.mrwenfeng.com" target="_blank">
+                        <a @click="$router.push('/donate')" target="_blank">
                             <el-dropdown-item>关于作者</el-dropdown-item>
                         </a>
                         <a href="https://github.com/15017872695/vue-Project-Environment-.git" target="_blank">

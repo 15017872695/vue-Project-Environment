@@ -14,6 +14,7 @@ export default new Router({
       path: '/home', 
       name:'home',
       component: resolve => require(['@/views/home'],resolve),
+      redirect:'/dashboard',
       meta:{title:'首页'},
       children:[//children配置子路由
         {
