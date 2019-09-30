@@ -1,0 +1,33 @@
+{
+    "common": {
+        "home": "Home",
+        "login": "Login",
+        "register": "Register",
+        "appDownload": "APP Download",
+        "aboutUs": "About Us",
+        "faq": "FAQ",
+        "contact": "Contact Us",
+        "join": "Join Us",
+        "copyright": "Copyright © ZLGMcu Ltd",
+        "news": "News",
+        "toggle": "Toggle",
+        "welcome": "Welcome, ",
+        "userinfo": "Userinfo",
+        "firstPage": "Home",
+        "setting": "Setting",
+        "exit": "ExitLogin"
+    },
+    "message": {
+        "hint1": "Please Input Nickname",
+        "hint2": "Please Input Username",
+        "hint3": "Please Input Password",
+        "hint4": "Don't find picture",
+        "hint5": "No Account?",
+        "hint6": "Register Now",
+        "hint7": "Remember me",
+        "hint8": "Can't login in?",
+        "placeHolder1": "Nickname",
+        "placeHolder2": "Username or Phone Number or Email",
+        "placeHolder3": "Password(8 Digits at Least)"
+    }
+}

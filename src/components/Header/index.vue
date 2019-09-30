@@ -38,9 +38,10 @@
                         <a href="https://github.com/15017872695/vue-Project-Environment-.git" target="_blank">
                             <el-dropdown-item>项目仓库</el-dropdown-item>
                         </a>
-                        <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
+                        <el-dropdown-item divided command="loginout">{{$t("common.exit")}}</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
+                <el-button type="primary" round style="margin-left:10px;" @click="changeLanguage">{{$t("common.toggle")}}</el-button>
             </div>
         </div>
     </div>
@@ -102,6 +103,11 @@
                     }
                 }
                 this.fullscreen = !this.fullscreen;
+            },
+            // 切换语言
+            changeLanguage(){
+                let lang = this.$i18n.locale === 'zh' ? 'en' :'zh';
+                this.$i18n.locale = lang;
             }
         },
         mounted() {

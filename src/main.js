@@ -9,6 +9,21 @@ import element from '../babel-plugin-component';
 import wx from  'weixin-js-sdk';
 import echarts from 'echarts';
 
+// 步骤一：安装vue-i18n
+  // npm install vue-i18n --save
+
+// 引入i18n国际化插件
+import VueI18n from 'vue-i18n'
+Vue.use(VueI18n)
+// 注册i18n实例并引入语言文件，文件格式等下解析
+const i18n = new VueI18n({
+  locale: 'zh',
+  messages: {
+    'zh': require('@/assets/languages/zh.json'),
+    'en': require('@/assets/languages/en.json')
+  }
+})
+
 Vue.use(element)
 
 config.baseURL;  // 对应环境api
@@ -45,5 +60,6 @@ Router.prototype.push = function push(location) {
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

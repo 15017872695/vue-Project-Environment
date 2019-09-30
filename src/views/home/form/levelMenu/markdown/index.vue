@@ -58,7 +58,7 @@ export default {
         width: 100%;
         height: 100%;
     }
-    .editor-btn{
+    /* .editor-btn{
         margin-top: 20px;
-    }
+    } */
 </style>
