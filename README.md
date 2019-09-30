@@ -1,22 +1,31 @@
 # vue-cli3bk
+```
+   此项目为练习Demo，若有侵权行为，请告知15017872695@163.com
+  《以下前两个步骤，需按流程依次执行》
+  
+```
 
 ## Project setup
 ```
+安装依赖
 npm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
+启动项目
 npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
+打包
 npm run build
 ```
 
 ### Run your tests
 ```
+启动调试
 npm run test
 ```
 
