@@ -1,5 +1,7 @@
 import request from '@/utils/request';
 
+// 由于 已在axios中配置了默认域名，所以在以后的请求中，可不在需要填写域名
+
 export default{
     // 登录
     login(data){
@@ -16,10 +18,10 @@ export default{
             method:'get',
         })
     },
-     // 获取微信SDK数据
-     getWXSDKInfo (){
+    // 获取微信SDK数据
+    getWXSDKInfo (){
         return request({
-            url:'http://hyfpc.fangcuanhuoxitong.com/MobileApi/BaseParam/GetWxConfig',
+            url:'/MobileApi/BaseParam/GetWxConfig',
             method:'get',
         })
     },

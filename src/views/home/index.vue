@@ -28,12 +28,12 @@
                         </div>
                     </div>
                 </el-col>
-                <!-- <el-col :span="24" style="height:7%;border-top:1px solid #eee;">
+                <el-col :span="24" style="height:7%;border-top:1px solid #eee;">
                     <div class="grid-content bg-purple-dark bg-purple-darkTwo">
                         <span>本系统由私人开发</span>
                         <span>Vue项目环境配置标准版-后台管理系统©2019/8/12</span>
                     </div>
-                </el-col> -->
+                </el-col>
             </el-row>
         </div>
     </div>

@@ -175,7 +175,7 @@
             getEchars() {
                 // 基于准备好的dom，初始化echarts实例
                 var myChartOne = this.$echarts.init(document.getElementsByClassName('echartsWapper')[0]);
-                console.log(myChartOne);
+                // console.log(myChartOne);
                 var optionOne = {
                     title: {
                         text: '后台管理系统数据表',
@@ -325,11 +325,8 @@
             },
             handleSelectionChange(val) {
                 this.multipleSelection = val;
-                
             },
             toggleDelect(){
-                console.log(this.multipleSelection)
-                console.log(this.tableData4)
                 var newArray = [];
                 for(var i=0;i<this.tableData4.length;i++){
                     if(this.multipleSelection.length<1){

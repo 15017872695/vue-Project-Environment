@@ -26,9 +26,9 @@ module.exports = {
     },
     // 跨域配置
     devServer: {
-    proxy: {
-        '/api': {
-            target: 'http://192.168.2.30:8080/',
+        proxy: {
+            '/api': {
+                target: 'http://192.168.2.30:8080/',
                 changeOrigin: true
             }
         }

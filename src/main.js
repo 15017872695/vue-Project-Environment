@@ -36,21 +36,6 @@ Vue.prototype.$echarts = echarts;
 
 Vue.use(echarts);
 
-
-// 全局路由守卫(全局控制登录)
-// router.beforeEach((to, from, next) => {
-//   var isToken = localStorage.getItem('token')
-//   console.log(localStorage.getItem('token'))
-//   console.log(to)
-//   if(isToken != '' && isToken != null){
-//     next();
-//   }else{
-//     next({path:'/login'})
-//   }
-// })
-
-
-
 // vue router 报错： Uncaught (in promise) NavigationDuplicated {_name:""NavigationDuplicated"... 的解决方法
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {

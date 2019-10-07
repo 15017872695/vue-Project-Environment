@@ -1,6 +1,6 @@
 import axios from 'axios';
 import config from '../config/index';//导入路径配置文件
-
+console.log(config)
 // 创建axios实例
 const service = axios.create({
     baseURL:config.baseURL,//api的base_url

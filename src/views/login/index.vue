@@ -35,25 +35,26 @@
             goHome:function(){
                 var _this = this;
                 // 发送请求获取必要参数
-                $http.getWXSDKInfo().then(function(data){
-                    _this.wxInfo = JSON.parse(data._data);
-                    // console.log(_this.wxInfo)
-                    // 配置
-                    _this.wx.config({
-                        debug: false,// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-                        appId: _this.wxInfo.AppID, // 必填，公众号的唯一标识
-                        timestamp:_this.wxInfo.timestamp , // 必填，生成签名的时间戳
-                        nonceStr: _this.wxInfo.nonceStr, // 必填，生成签名的随机串
-                        signature:_this.wxInfo.signature,// 必填，签名
-                        jsApiList:['onMenuShareTimeline','onMenuShareAppMessage','hideMenuItems','showMenuItems','showAllNonBaseMenuItem','hideAllNonBaseMenuItem','startRecord','stopRecord','onVoiceRecordEnd','uploadVoice','downloadVoice','playVoice','onVoicePlayEnd','pauseVoice','stopVoice','openLocation','getLocation','chooseWXPay','onMenuShareQQ','scanQRCode'], // 必填，需要使用的JS接口列表
-                    })
-                    _this.scan();
-                    _this.wx.error(function (res) {
-                        alert(res);
-                    });
-                }).catch(function (err) {
-                    // console.log(err)
-                })
+                // $http.getWXSDKInfo().then((data)=>{
+                //     _this.wxInfo = JSON.parse(data._data);
+                //     console.log(_this.wxInfo)
+                //     // 配置
+                //     _this.wx.config({
+                //         debug: false,// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                //         appId: _this.wxInfo.AppID, // 必填，公众号的唯一标识
+                //         timestamp:_this.wxInfo.timestamp , // 必填，生成签名的时间戳
+                //         nonceStr: _this.wxInfo.nonceStr, // 必填，生成签名的随机串
+                //         signature:_this.wxInfo.signature,// 必填，签名
+                //         jsApiList:['onMenuShareTimeline','onMenuShareAppMessage','hideMenuItems','showMenuItems','showAllNonBaseMenuItem','hideAllNonBaseMenuItem','startRecord','stopRecord','onVoiceRecordEnd','uploadVoice','downloadVoice','playVoice','onVoicePlayEnd','pauseVoice','stopVoice','openLocation','getLocation','chooseWXPay','onMenuShareQQ','scanQRCode'], // 必填，需要使用的JS接口列表
+                //     })
+                //     _this.scan();
+                //     _this.wx.error((res)=>{
+                //         alert(res);
+                //     });
+                // }).catch((err)=> {
+                //     // console.log(err)
+                // })
+                localStorage.setItem('token','yesLogin');
                 this.$router.push({path:'/dashboard'})
             },
             scan(){
