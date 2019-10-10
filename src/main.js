@@ -9,6 +9,12 @@ import element from '../babel-plugin-component';
 import wx from  'weixin-js-sdk';
 import echarts from 'echarts';
 
+// npm i slider-verification-code --save 图片滑块验证码
+import SliderVerificationCode from 'slider-verification-code';
+import 'slider-verification-code/lib/slider-verification-code.css';
+ 
+Vue.use(SliderVerificationCode);
+
 // 步骤一：安装vue-i18n
   // npm install vue-i18n --save
 
