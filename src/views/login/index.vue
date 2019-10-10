@@ -3,16 +3,16 @@
         <div class="loginFrom">
             <div class='loginFromWapper'>
                 <img src="@/assets/img/HTMLicon.png" alt="" style="width:20%;margin-top:45px;margin-bottom:25px;">
-                <el-input placeholder="请输入用户名" v-model="input" autocomplete="off" clearable>
+                <el-input placeholder="请输入用户名" v-model="userName" autocomplete="off" clearable>
                     <el-button slot="prepend" icon="el-icon-setting">
                     </el-button>
                 </el-input>
-                <el-input placeholder="请输入密码" v-model="password" autocomplete="off" show-password>
+                <el-input placeholder="请输入密码" v-model="passWord" autocomplete="off" show-password>
                     <el-button slot="prepend" icon="el-icon-view"></el-button>
                 </el-input>
                 <el-button type="primary" :loading="loginBln" @click='goHome'>登录</el-button>
                 <div class="zhuce">
-                    <p class="login-tips">Tips : 用户名和密码随便填。</p>
+                    <p class="login-tips">Tips : 登录去展开您的新世界吧。</p>
                     <span>注 册</span>
                 </div>
             </div>
@@ -21,12 +21,13 @@
 </template>
 <script>
     import $http from "@/api/user.js";
+    import auth from '@/utils/auth';
     export default {
         name: 'login',
-        data: function () {
+        data() {
             return {
-                input: '',
-                password: '',
+                userName: 'admin',
+                passWord: '123456',
                 loginBln: false,
                 wxInfo:null
             }
@@ -52,10 +53,23 @@
                 //         alert(res);
                 //     });
                 // }).catch((err)=> {
-                //     // console.log(err)
+                //     console.log(err)
                 // })
-                localStorage.setItem('token','yesLogin');
-                this.$router.push({path:'/dashboard'})
+
+                if(this.userName == 'admin' && this.passWord == '123456'){
+                    this.$message({
+                        message: '登录成功，欢迎来到我的后台',
+                        type: 'success'
+                    });
+                    localStorage.setItem('token','yesLogin');
+                    this.$router.push({path:'/dashboard'})
+                }else{
+                    this.$message({
+                        message: '登录失败，请确认账号/密码是否正确',
+                        type: 'error'
+                    });
+                    return false;
+                }
             },
             scan(){
                 var _this = this;
@@ -69,10 +83,15 @@
                         }
                     });             
                 })
-            }
+            },
         },
         mounted() {
-            
+            this.$notification({
+                title: '系统消息',
+                message: '账号：admin 密码：123456',
+                iconClass:'el-icon-s-comment',
+                duration: 0
+            });
         },
     }
 </script>
@@ -129,7 +148,8 @@
     }
     .zhuce span {
         padding: 3px 5px;
-        border-bottom: 1px solid #409EFF;
+
+        border: 1px solid #409EFF;
     }
     .login-tips{
         color: #fff;
