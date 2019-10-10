@@ -7,7 +7,6 @@
                 </div>
             </el-col>
         </el-row>
-        
         <div class='containerWapper'>
             <el-row :gutter="10" style="margin:0px;height:100%;">
                 <el-col style="height:100%;">
@@ -22,20 +21,22 @@
                         <Container-Top-NavBar></Container-Top-NavBar>
                         <div class='ContainerCenter'>
                             <!-- 系统首页主内容路由出口 -->
-                            <keep-alive>
-                                <router-view></router-view>
-                            </keep-alive>
+                            <transition mode="out-in">
+                                <keep-alive>
+                                    <router-view></router-view>
+                                </keep-alive>
+                            </transition>
                         </div>
-                    </div>
-                </el-col>
-                <el-col :span="24" style="height:7%;border-top:1px solid #eee;">
-                    <div class="grid-content bg-purple-dark bg-purple-darkTwo">
-                        <span>本系统由私人开发</span>
-                        <span>Vue项目环境配置标准版-后台管理系统©2019/8/12</span>
                     </div>
                 </el-col>
             </el-row>
         </div>
+        <el-col :span="24" style="height:7.5%;border-top:1px solid #eee;">
+            <div class="grid-content bg-purple-dark bg-purple-darkTwo">
+                <span>郑重声明：本系统仅限于练习使用</span>
+                <span>Vue项目环境配置标准版-后台管理系统©2019/8/12</span>
+            </div>
+        </el-col>
     </div>
 </template>
 <script>
@@ -75,11 +76,12 @@
 <style scoped lang="scss">
     .home {
         width: 100%;
-        height: 100%;
+        height: 93%;
+        
     }
     .el-container {
         width: 100%;
-        height: 100%;
+        height: 93%;
     }
     .el-col{
         padding: 0px !important;
@@ -88,7 +90,6 @@
         width: 100%;
         height:93%;
         display:flex;
-        
     }
     .el-aside{
         position: relative;
@@ -128,5 +129,14 @@
     .bg-purple-darkTwo span:nth-child(2){
         margin-top: 10px;
     }
-    
+    .v-enter,
+    .v-leave-to {
+      opacity: 0;
+      transform: translateX(150px);
+    }
+
+    .v-enter-active,
+    .v-leave-active {
+      transition: all 0.5s ease;
+    }
 </style>

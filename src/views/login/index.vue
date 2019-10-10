@@ -10,6 +10,7 @@
                 <el-input placeholder="请输入密码" v-model="passWord" autocomplete="off" show-password>
                     <el-button slot="prepend" icon="el-icon-view"></el-button>
                 </el-input>
+                <SliderVerificationCode v-model="value"  inactiveValue="未解锁" activeValue="已解锁" @change="handleChange(value)"/>
                 <el-button type="primary" :loading="loginBln" @click='goHome'>登录</el-button>
                 <div class="zhuce">
                     <p class="login-tips">Tips : 登录去展开您的新世界吧。</p>
@@ -29,7 +30,8 @@
                 userName: 'admin',
                 passWord: '123456',
                 loginBln: false,
-                wxInfo:null
+                wxInfo:null,
+                value:'未解锁'
             }
         },
         methods: {
@@ -56,6 +58,13 @@
                 //     console.log(err)
                 // })
 
+                if(this.value!='已解锁'){
+                    this.$message({
+                        message: '请完成滑动验证！',
+                        type: 'error'
+                    });
+                    return false;
+                }
                 if(this.userName == 'admin' && this.passWord == '123456'){
                     this.$message({
                         message: '登录成功，欢迎来到我的后台',
@@ -84,6 +93,9 @@
                     });             
                 })
             },
+            handleChange(value){
+                console.log('您验证结果为:',value);
+            }
         },
         mounted() {
             this.$notification({
@@ -108,14 +120,16 @@
 
     .loginFrom {
         width: 400px;
-        height: 400px;
+        height: auto;
         background: rgba(255, 255, 255, 0.2);
         border-radius: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
     }
 
     .loginFromWapper {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         align-items: center;
     }
     .el-button--primary{
@@ -148,13 +162,15 @@
     }
     .zhuce span {
         padding: 3px 5px;
-
         border: 1px solid #409EFF;
     }
     .login-tips{
         color: #fff;
     }
-
+    .app-drag{
+        width: 65%;
+        margin-top: 5px;
+    }
 </style>
 <style>
     .el-input-group__append, .el-input-group__prepend{
