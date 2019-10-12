@@ -38,6 +38,15 @@ const router =  new Router({
           },
         },
         {
+          path:'/excelDate',
+          name:'excelDate',
+          component:resolve => require(['@/views/home/excelDate'],resolve),
+          meta:{
+            title:'Excel导入导出',
+            keepAlive: true // 需要被缓存
+          },
+        },
+        {
           path:'/table',
           name:'table',
           component:resolve => require(['@/views/home/table'],resolve),

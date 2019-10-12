@@ -9,9 +9,16 @@ import element from '../babel-plugin-component';
 import wx from  'weixin-js-sdk';
 import echarts from 'echarts';
 
+
 // npm i slider-verification-code --save 图片滑块验证码
 import SliderVerificationCode from 'slider-verification-code';
 import 'slider-verification-code/lib/slider-verification-code.css';
+
+// vue中使用excel导入导出，需要下载3个依赖包和2个js包
+// npm install -S file-saver xlsx（这里其实安装了2个依赖）
+// npm install -D script-loader
+import Blob from './assets/excel/Blob.js';
+import Export2Excel from './assets/excel/Export2Excel.js';
  
 Vue.use(SliderVerificationCode);
 

@@ -45,7 +45,7 @@
     import ContainerTopNavBar from '@/components/ContainerTopNavBar'
     export default {
         name: 'home',
-        data:function(){
+        data(){
             return{
                 xitongHomeBLN:true
             }
@@ -77,7 +77,6 @@
     .home {
         width: 100%;
         height: 93%;
-        
     }
     .el-container {
         width: 100%;

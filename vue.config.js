@@ -11,6 +11,15 @@ module.exports = {
             }
         }
     },
+    resolve: {
+        extensions: ['.js', '.vue', '.json'],
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js',
+            '@': resolve('src'),
+            'scss_vars': '@/styles/vars.scss',
+            'excel': path.resolve(__dirname, '../src/excel'),//新增加一行
+        }
+    },
      // 配置
     chainWebpack: (config)=>{
         // 文件目录配置别名    我们可以把src配置为@，如果需要就不用到根目录开始写了，直接用@/xxx/进行引

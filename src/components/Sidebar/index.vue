@@ -88,6 +88,11 @@
                         title: '自定义图标'
                     },
                     {
+                        icon: 'el-icon-date',
+                        index: 'excelDate',
+                        title: 'Excel导入导出'
+                    },
+                    {
                         icon: 'el-icon-pie-chart',
                         index: 'charts',
                         title: '地图图表'
