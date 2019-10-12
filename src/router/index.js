@@ -96,7 +96,7 @@ const router =  new Router({
           name:'charts',
           component:resolve => require(['@/views/home/charts'],resolve),
           meta:{
-            title:'echarts图标',
+            title:'地图图表',
             keepAlive: true // 需要被缓存
           },
         },

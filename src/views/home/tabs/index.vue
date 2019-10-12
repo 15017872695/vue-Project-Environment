@@ -108,7 +108,7 @@
         }
     }
 </script>
-<style scope>
+<style scoped>
     .tabs,
     .TabsCardWapper,
     .el-card__body,

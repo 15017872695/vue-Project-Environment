@@ -32,5 +32,5 @@ export default{
             method:'post',
             data:queryPage
         })
-    } 
+    }
 }
