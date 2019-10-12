@@ -64,7 +64,7 @@
                             },
                             {
                                 index: 'levelMenu',
-                                title: '三级菜单',
+                                title: '图文编辑器',
                                 subs: [
                                     {
                                         index: 'richTextEditor',
@@ -90,7 +90,7 @@
                     {
                         icon: 'el-icon-pie-chart',
                         index: 'charts',
-                        title: 'schart图表'
+                        title: '地图图表'
                     },
                     {
                         icon: 'el-icon-rank',

@@ -33,7 +33,7 @@
         </div>
         <el-col :span="24" style="height:7.5%;border-top:1px solid #eee;">
             <div class="grid-content bg-purple-dark bg-purple-darkTwo">
-                <span>郑重声明：本系统仅限于练习使用</span>
+                <span>本系统仅限于练习使用，禁止商业化</span>
                 <span>Vue项目环境配置标准版-后台管理系统©2019/8/12</span>
             </div>
         </el-col>
@@ -132,11 +132,11 @@
     .v-enter,
     .v-leave-to {
       opacity: 0;
-      transform: translateX(150px);
+      /* transform: translateX(150px); */
     }
 
     .v-enter-active,
     .v-leave-active {
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
     }
 </style>
