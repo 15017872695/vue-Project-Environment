@@ -210,7 +210,8 @@ export default {
                 // if(this.end !== '') {
                 //     time2 = that.moment(that.end).format('YYYY-MM-DD')
                 // }
-                export_json_to_excel(tHeader, data, `[${time1}-${time2}]提现管理excel`);// 导出的表格名称，根据需要自己命名
+                // ${time1}-${time2}
+                export_json_to_excel(tHeader, data, `[测试数据]后台数据导出excel`);// 导出的表格名称，根据需要自己命名
             })
         },
         formatJson(filterVal, jsonData) {

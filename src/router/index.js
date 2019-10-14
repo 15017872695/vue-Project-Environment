@@ -105,7 +105,16 @@ const router =  new Router({
           name:'charts',
           component:resolve => require(['@/views/home/charts'],resolve),
           meta:{
-            title:'地图图表',
+            title:'地图数据图表',
+            keepAlive: true // 需要被缓存
+          },
+        },
+        {
+          path:'/map',
+          name:'map',
+          component:resolve => require(['@/views/home/map'],resolve),
+          meta:{
+            title:'地图定位',
             keepAlive: true // 需要被缓存
           },
         },
