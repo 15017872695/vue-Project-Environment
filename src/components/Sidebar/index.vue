@@ -95,7 +95,12 @@
                     {
                         icon: 'el-icon-pie-chart',
                         index: 'charts',
-                        title: '地图图表'
+                        title: '地图数据图表'
+                    },
+                    {
+                        icon: 'el-icon-pie-chart',
+                        index: 'map',
+                        title: '地图定位'
                     },
                     {
                         icon: 'el-icon-rank',

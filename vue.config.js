@@ -51,5 +51,10 @@ module.exports = {
         config.optimization.splitChunks({//分割
             chunks: 'all'
         })
-    }
+    },
+    // externals: {
+    //     'AMap':'AMap',
+    //     'BMap':'BMap',
+    //     'AMapUI':'AMapUI'
+    // },
 }
