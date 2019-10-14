@@ -46,6 +46,7 @@ import {   Button,
            RadioGroup,
            Upload,
            Notification,
+           MessageBox,
   } from 'element-ui'
  const element = {
   install: function (Vue) {
@@ -100,5 +101,6 @@ import {   Button,
 
  Vue.prototype.$message = Message
  Vue.prototype.$notification = Notification
+ Vue.prototype.$confirm = MessageBox
 
 //  在组件中使用 则可以直接通过this.$xxx的方式来使用
