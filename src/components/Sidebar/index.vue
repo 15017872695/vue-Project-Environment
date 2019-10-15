@@ -162,7 +162,6 @@
 
 <style scoped>
     .sidebar{
-
         height:100%;
     }
     .sidebar::-webkit-scrollbar{
@@ -176,5 +175,6 @@
     }
     .el-menu{
         border: none;
+        overflow-y:auto;
     }
 </style>

@@ -52,9 +52,11 @@ module.exports = {
             chunks: 'all'
         })
     },
-    // externals: {
-    //     'AMap':'AMap',
-    //     'BMap':'BMap',
-    //     'AMapUI':'AMapUI'
-    // },
+    configureWebpack: {
+        externals: {
+            'AMap':'AMap',
+            'BMap':'BMap',
+            'AMapUI':'AMapUI'
+        },
+    }
 }
