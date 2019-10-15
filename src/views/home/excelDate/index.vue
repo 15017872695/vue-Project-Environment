@@ -3,7 +3,7 @@
         <el-row :gutter="10" style="width:100%;height:100%;margin:0px;">
             <el-col :span="24" style='padding:0px;height:100%;'>
                 <el-card shadow="hover"  style='padding:0px;height:100%;'>
-                        <div style='width:100%;display:flex;'>
+                        <div class="excelDate-Title">
                             <el-input v-model="input" placeholder="请输入内容"></el-input>
                             <el-upload
                                 class="upload-demo"
@@ -90,6 +90,7 @@ export default {
     },
     methods: {
         handleChange(file, fileList){
+            console.log(fileList)
             this.fileTemp = file.raw
             // 判断上传文件格式
             if(this.fileTemp){
@@ -114,6 +115,7 @@ export default {
         },
         // 导入excel表
         importfxx(obj) {
+            console.log(obj)
             let _this = this;
             // 通过DOM取文件数据
             this.file = obj
@@ -228,10 +230,17 @@ export default {
         height:100%;
     }
     .el-card{
+        width: 100%;
         overflow-y:auto;
     }
-    .el-card .el-input{
-        width: 15%;
+    .el-card {
+        
+    }
+    .excelDate-Title{
+        width:100%;display:flex;
+    }
+    .excelDate-Title .el-input{
+        width:15%;
     }
     .upload-demo{
         width: auto;
