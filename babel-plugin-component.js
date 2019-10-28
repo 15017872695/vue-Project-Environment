@@ -47,6 +47,7 @@ import {   Button,
            Upload,
            Notification,
            MessageBox,
+           divider,
   } from 'element-ui'
  const element = {
   install: function (Vue) {
@@ -93,6 +94,7 @@ import {   Button,
     Vue.use(CheckboxGroup)
     Vue.use(RadioGroup)
     Vue.use(Upload)
+    Vue.use(divider)
   }
  }
  export default element

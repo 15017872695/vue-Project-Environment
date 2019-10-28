@@ -29,7 +29,7 @@
         let myChart = this.$echarts.init(this.$refs.myEchart); //这里是为了获得容器所在位置    
         window.onresize = myChart.resize;
         myChart.setOption({ // 进行相关配置
-          backgroundColor: "#02AFDB",
+          backgroundColor: "#1C1C1C",
           tooltip: {}, // 鼠标移到图里面的浮动提示框
           dataRange: {
             show: false,
@@ -109,8 +109,10 @@
         display: flex;
         justify-content: center;
         margin-top:0px;
+        border-radius:5px;
     }
     .echartsWapper > div:nth-child(1){
         margin-left:0 !important;
+        border-radius:5px;
     }
 </style>

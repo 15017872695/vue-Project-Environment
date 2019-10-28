@@ -115,6 +115,7 @@
         box-sizing: border-box;
         background:#f5f5f5;
         overflow-y: auto;
+        position: relative;;
     }
     .bg-purple-darkTwo{
        display:flex;

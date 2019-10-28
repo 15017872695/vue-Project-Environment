@@ -24,7 +24,7 @@
             <ul>
                 <li class="icon-li" v-for="(item,index) in list" :key="index">
                     <div class="icon-li-content">
-                        <i :class="`el-icon-lx-${item}`"></i>
+                        <i :class="`el-icon-${item}`"></i>
                         <span>{{item}}</span>
                     </div>
                 </li>
@@ -38,16 +38,16 @@
             return {
                 keyword: '',
                 iconList: [
-                    'attentionforbid',
-                    'attentionforbidfill',
-                    'attention',
-                    'attentionfill',
-                    'tag',
-                    'tagfill',
-                    'people',
-                    'peoplefill',
-                    'notice',
-                    'noticefill',
+                    'platform-eleme',
+                    'eleme',
+                    'delete-solid',
+                    'delete',
+                    's-tools',
+                    'setting',
+                    'user-solid',
+                    'user',
+                    'phone',
+                    'phone-outline',
                     'mobile',
                     'mobilefill',
                     'voice',
