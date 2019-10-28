@@ -52,6 +52,13 @@ module.exports = {
             chunks: 'all'
         })
     },
+<<<<<<< HEAD
+    // externals: {
+    //     'AMap':'AMap',
+    //     'BMap':'BMap',
+    //     'AMapUI':'AMapUI'
+    // },
+=======
     configureWebpack: {
         externals: {
             'AMap':'AMap',
@@ -59,4 +66,5 @@ module.exports = {
             'AMapUI':'AMapUI'
         },
     }
+>>>>>>> dev
 }
