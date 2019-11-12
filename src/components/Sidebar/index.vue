@@ -103,6 +103,11 @@
                         title: '地图定位'
                     },
                     {
+                        icon: 'el-icon-pie-chart',
+                        index: 'echartsLiquidfill',
+                        title: 'echarts水晶球'
+                    },
+                    {
                         icon: 'el-icon-rank',
                         index: 'dragComponent',
                         title: '拖拽组件',
