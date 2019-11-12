@@ -1,6 +1,6 @@
 <template>
     <div>
-            拖拽弹框
+        拖拽弹框
     </div>
 </template>
 <script>

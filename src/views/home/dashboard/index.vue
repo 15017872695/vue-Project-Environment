@@ -328,19 +328,34 @@
             },
             toggleDelect(){
                 var newArray = [];
-                for(var i=0;i<this.tableData4.length;i++){
-                    if(this.multipleSelection.length<1){
-                        return false;
+                this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    for(var i=0;i<this.tableData4.length;i++){
+                        if(this.multipleSelection.length<1){
+                            return false;
+                        }
+                        if(i>this.multipleSelection.length-1){
+                            return false;
+                        }
+                        if(this.multipleSelection[i].name == this.tableData4[i].name){
+                            console.log(this.tableData4[i].name)
+                            this.$message({
+                                type: 'success',
+                                message: '删除成功!'
+                            });
+                        }
                     }
-                    if(i>this.multipleSelection.length-1){
-                        return false;
-                    }
-                    if(this.multipleSelection[i].name == this.tableData4[i].name){
-                        console.log(this.tableData4[i].name)
-                    }
-                }
-                
-            }
+                    
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });          
+                });
+            },
         },
         mounted() {
             this.getEchars();
