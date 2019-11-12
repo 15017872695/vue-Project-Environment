@@ -119,6 +119,15 @@ const router =  new Router({
           },
         },
         {
+          path:'/echartsLiquidfill',
+          name:'echartsLiquidfill',
+          component:resolve => require(['@/views/home/echartsLiquidfill'],resolve),
+          meta:{
+            title:'echarts水晶球',
+            keepAlive: true // 需要被缓存
+          },
+        },
+        {
           path:'/drag',
           name:'drag',
           component:resolve => require(['@/views/home/dragComponent/drag'],resolve),
@@ -126,7 +135,6 @@ const router =  new Router({
             title:'拖拽列表',
             keepAlive: true // 需要被缓存
           },
-          
         },
         {
           path:'/dialog',
