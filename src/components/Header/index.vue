@@ -53,7 +53,7 @@
             return {
                 collapse: false,
                 fullscreen: false,
-                name: 'linxin',
+                name: '小余',
                 message: 2
             }
 

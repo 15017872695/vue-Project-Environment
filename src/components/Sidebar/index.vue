@@ -98,12 +98,22 @@
                         title: '地图数据图表'
                     },
                     {
-                        icon: 'el-icon-pie-chart',
+                        icon:'el-icon-data-line',
+                        index: 'antVG2',
+                        title: 'antV/G2看板'
+                    },
+                    {
+                        icon:'el-icon-no-smoking',
+                        index: 'antVG6',
+                        title: 'antV/G6流程图'
+                    },
+                    {
+                        icon: 'el-icon-map-location',
                         index: 'map',
                         title: '地图定位'
                     },
                     {
-                        icon: 'el-icon-pie-chart',
+                        icon: 'el-icon-picture-outline-round',
                         index: 'echartsLiquidfill',
                         title: 'echarts水晶球'
                     },
@@ -171,6 +181,7 @@
     }
     .sidebar::-webkit-scrollbar{
         width: 0;
+        display: none; 
     }
     .sidebar-el-menu:not(.el-menu--collapse){
         width: 250px;
@@ -181,5 +192,8 @@
     .el-menu{
         border: none;
         overflow-y:auto;
+    }
+    .el-menu::-webkit-scrollbar{
+        display: none; 
     }
 </style>

@@ -2,12 +2,16 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router/index';
 import Router from 'vue-router'
+import i18n from './i18n'
 import store from './store/index';
+import * as Cookies from 'js-cookie'
 import config from './config/index';// 路径配置
+import configTwo from './config/cookie'
 import 'element-ui/lib/theme-chalk/index.css';//ElementUI样式表
 import element from '../babel-plugin-component';
 import wx from  'weixin-js-sdk';
 import echarts from 'echarts';
+import utils from './global/utils'
 
 
 // npm i slider-verification-code --save 图片滑块验证码
@@ -22,20 +26,30 @@ import Export2Excel from './assets/excel/Export2Excel.js';
  
 Vue.use(SliderVerificationCode);
 
+
+// 挂载 $X 命名空间
+Vue.prototype.$X = {
+  utils,
+  configTwo,
+  Cookies
+}
+// i18n实例
+const i18nInstance = i18n(Vue, 'zh-CN')
+
 // 步骤一：安装vue-i18n
   // npm install vue-i18n --save
 
 // 引入i18n国际化插件
-import VueI18n from 'vue-i18n'
-Vue.use(VueI18n)
+// import VueI18n from 'vue-i18n'
+// Vue.use(VueI18n)
 // 注册i18n实例并引入语言文件，文件格式等下解析
-const i18n = new VueI18n({
-  locale: 'zh',
-  messages: {
-    'zh': require('@/assets/languages/zh.json'),
-    'en': require('@/assets/languages/en.json')
-  }
-})
+// const i18n = new VueI18n({
+//   locale: 'zh',
+//   messages: {
+//     'zh': require('@/assets/languages/zh.json'),
+//     'en': require('@/assets/languages/en.json')
+//   }
+// })
 
 Vue.use(element)
 
@@ -58,6 +72,6 @@ Router.prototype.push = function push(location) {
 new Vue({
   router,
   store,
-  i18n,
+  i18n:i18nInstance,
   render: h => h(App)
 }).$mount('#app')

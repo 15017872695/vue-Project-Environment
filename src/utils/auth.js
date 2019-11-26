@@ -1,5 +1,5 @@
-import Cookies from 'js-cookie'
 
+import * as Cookies from 'js-cookie'
 const TokenKey = 'Authorization'
 /*
 * 设置setLocalStorage
@@ -29,17 +29,18 @@ export function getSessionStorage (key) {
 * 获取getToken
 * */
 export function getToken () {
+
     return Cookies.get(TokenKey)
 }
 /*
 * 设置setToken
 * */
 export function setToken (token) {
-    return Cookies.set(TokenKey, token)
+    return  Cookies.set(TokenKey, token)
 }
 /*
 * 移除removeToken
 * */
 export function removeToken () {
-    return Cookies.remove(TokenKey)
+    return  Cookies.remove(TokenKey)
 }

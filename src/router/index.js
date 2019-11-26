@@ -34,7 +34,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/icon'],resolve),
           meta:{
             title:'自定义图标',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -43,7 +44,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/excelDate'],resolve),
           meta:{
             title:'Excel导入导出',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -52,7 +54,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/table'],resolve),
           meta:{
             title:'基础表格',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -61,7 +64,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/tabs'],resolve),
           meta:{
             title:'tab选项卡',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -70,7 +74,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/form/basicForm'],resolve),
           meta:{
             title:'基本表单',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -79,7 +84,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/form/levelMenu/richTextEditor'],resolve),
           meta:{
             title:'富文本编辑器',
-          keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -88,7 +94,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/form/levelMenu/markdown'],resolve),
           meta:{
             title:'markdown编辑器',
-            keepAlive: false // 不需要被缓存
+            keepAlive: false, // 不需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -97,7 +104,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/form/upload'],resolve),
           meta:{
             title:'文件上传',
-            keepAlive: false // 不需要被缓存
+            keepAlive: false, // 不需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -106,7 +114,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/charts'],resolve),
           meta:{
             title:'地图数据图表',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -115,7 +124,27 @@ const router =  new Router({
           component:resolve => require(['@/views/home/map'],resolve),
           meta:{
             title:'地图定位',
-            keepAlive: true // 需要被缓存
+            needLogin:true,//是否需要登录权限
+          },
+        },
+        {
+          path:'/antVG2',
+          name:'antVG2',
+          component:resolve => require(['@/views/home/antVG2'],resolve),
+          meta:{
+            title:'antV/G2看板',
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
+          },
+        },
+        {
+          path:'/antVG6',
+          name:'antVG6',
+          component:resolve => require(['@/views/home/antVG6'],resolve),
+          meta:{
+            title:'antV/G6流程图',
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -124,7 +153,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/echartsLiquidfill'],resolve),
           meta:{
             title:'echarts水晶球',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -133,7 +163,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/dragComponent/drag'],resolve),
           meta:{
             title:'拖拽列表',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -142,7 +173,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/dragComponent/dialog'],resolve),
           meta:{
             title:'拖拽弹框',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -151,7 +183,8 @@ const router =  new Router({
           component:resolve => require(['@/views/home/i18n'],resolve),
           meta:{
             title:'国际化',
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
@@ -161,7 +194,8 @@ const router =  new Router({
           meta:{
             title:'权限测试' , 
             permission:true,
-            keepAlive: true // 需要被缓存
+            keepAlive: true, // 需要被缓存
+            needLogin:true,//是否需要登录权限
           },
         },
         {
