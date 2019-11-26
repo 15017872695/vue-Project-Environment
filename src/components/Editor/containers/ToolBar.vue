@@ -8,10 +8,9 @@
     align-content: flex-start;
     width: 100%;
     padding: 0 20px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1);
     background: #ffffff;
     z-index: 500;
