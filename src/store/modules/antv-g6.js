@@ -1303,5 +1303,5 @@ const antVG6 = {
   actions: {
 
   },
-})
+}
 export default antVG6

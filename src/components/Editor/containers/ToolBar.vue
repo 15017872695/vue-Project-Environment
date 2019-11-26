@@ -223,7 +223,6 @@
   import ToolBox from '../../ToolBox/Index'
   import ToolItem from '../../ToolBox/ToolItem'
   import config from '../config/index'
-
   export default {
     name: 'ToolBar',
     components: {
@@ -271,6 +270,9 @@
         })
         return toolMap
       }
+    },
+    mounted(){
+      console.log(this)
     },
     methods: {
       toggleHandler (val) {

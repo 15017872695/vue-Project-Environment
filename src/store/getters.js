@@ -5,8 +5,8 @@ const getters = {
     avatar: state => state.user.avatar,
     name: state => state.user.name,
     roles: state => state.user.roles,
-    currentItem: state => state.editor.currentItem,
-    toolList: state => state.editor.toolList,
-    log: state => state.editor.log
+    currentItem: state => state.antVG6.editor.currentItem,
+    toolList: state => state.antVG6.editor.toolList,
+    log: state => state.antVG6.editor.log
 }
 export default getters;

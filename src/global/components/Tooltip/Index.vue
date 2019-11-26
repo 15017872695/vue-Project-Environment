@@ -4,7 +4,7 @@
 * Tooltip
 */
 
-<style scoped lang="less" rel="stylesheet/less">
+<style scoped lang="scss" rel="stylesheet/scss">
   .tooltip-box {
     position: relative;
     cursor: default;

@@ -4,7 +4,7 @@
 * Divider
 */
 
-<style scoped lang="less" rel="stylesheet/less">
+<style scoped lang="scss" rel="stylesheet/scss">
   .divider {
     display: inline-block;
     background: rgba(0, 0, 0, 0.1);
