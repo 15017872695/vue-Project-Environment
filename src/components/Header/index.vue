@@ -106,8 +106,8 @@
             },
             // 切换语言
             changeLanguage(){
-                let lang = this.$i18n.locale === 'zh' ? 'en' :'zh';
-                this.$i18n.locale = lang;
+                let lang = this.$i18n.locale === 'zh-US' ? 'en-US' :'zh-US';
+                this.$i18n.locale = lang; 
             }
         },
         mounted() {

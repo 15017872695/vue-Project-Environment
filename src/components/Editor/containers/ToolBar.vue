@@ -9,13 +9,13 @@
     width: 100%;
     padding: 0 20px;
     position: absolute;
-    top: 0;
+    top: 1px;
     left: 0;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1);
     background: #ffffff;
     z-index: 500;
     transition: all .5s ease-in-out;
-
+    border-top: 1p solid #000;
     .tool-box {
       display: flex;
       flex-wrap: nowrap;
@@ -37,7 +37,7 @@
         display: inline-block;
       }
       .divider {
-        height: calc("100% - 10px");
+        height: calc("100%");
       }
     }
   }
@@ -55,7 +55,9 @@
     </Handler>
     <template v-for="(type, typeIndex) in Object.keys(toolMap)">
       <ToolBox mode="horizontal" :key="typeIndex" :class="type">
+        
         <template v-for="(item, index) in toolMap[type]">
+ 
           <ToolItem
             v-if="item.type === 'text'"
             :key="'tool_' + type + '_item_' + index"
@@ -65,6 +67,7 @@
             @click.native="handleToolClick(item)"
           >
             <template v-slot:label>
+              <Icon type="arrow-down-a"></Icon>
               <XIcon v-if="item.icon" :type="item.icon"></XIcon>
               <span v-else>{{ $t(item.lang) }}</span>
             </template>
@@ -129,7 +132,8 @@
                     </XIcon>
                     <span v-else>{{ item.children[item.selected].label }}</span>
                   </template>
-                  <Icon type="ios-arrow-down"></Icon>
+                  <!-- <Icon type="ios-arrow-down"></Icon> -->
+                  <i class="el-icon-arrow-down"></i>
                 </div>
               </template>
               <template v-else>
@@ -141,6 +145,7 @@
                         style="vertical-align: middle;"
                       >
                       </XIcon>
+                      <i :class="item.icon"></i>
                     </template>
                     <template v-else>
                       <XIcon
@@ -152,7 +157,8 @@
                       </XIcon>
                       <span v-else>{{ item.children[item.selected].label }}</span>
                     </template>
-                    <Icon type="ios-arrow-down"></Icon>
+                    <!-- <Icon type="ios-arrow-down"></Icon> -->
+                    <!-- <i class="el-icon-arrow-down"></i> -->
                   </div>
                   <DropdownMenu slot="list">
                     <DropdownItem

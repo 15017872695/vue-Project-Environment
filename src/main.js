@@ -11,7 +11,10 @@ import 'element-ui/lib/theme-chalk/index.css';//ElementUI样式表
 import element from '../babel-plugin-component';
 import wx from  'weixin-js-sdk';
 import echarts from 'echarts';
-import utils from './global/utils'
+import components from './global/components'
+
+import utils from './global/utils';
+// import './assets/css/main.less';
 
 
 // npm i slider-verification-code --save 图片滑块验证码
@@ -26,6 +29,8 @@ import Export2Excel from './assets/excel/Export2Excel.js';
  
 Vue.use(SliderVerificationCode);
 
+// 注册全局组件
+Vue.use(components)
 
 // 挂载 $X 命名空间
 Vue.prototype.$X = {

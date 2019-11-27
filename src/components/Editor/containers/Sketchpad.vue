@@ -13,16 +13,17 @@
     top: 0;
     bottom: 0;
     .sketchpad-box::-webkit-scrollbar{
+      width:0;
       display: none;
     }
     .sketchpad {
       display: inline-block;
-      width: 960px;
+      width: 1050px;
       height: 1200px;
       position: absolute;
       left: 50%;
-      margin-left: -480px;
-      margin-top: 100px;
+      margin-left: -520px;
+      margin-top: 10px;
       margin-bottom: 100px;
       z-index: 100;
       background: #FFFFFF;
