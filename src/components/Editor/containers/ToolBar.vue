@@ -37,7 +37,7 @@
         display: inline-block;
       }
       .divider {
-        height: calc("100%");
+        height: "100%";
       }
     }
   }
