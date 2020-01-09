@@ -23,22 +23,22 @@
     align-content: flex-start;
     flex: 1 1 auto;
     z-index: 10;
-
-    &.left {
-      justify-content: flex-start;
-    }
-    &.center {
-      justify-content: center;
-    }
-    &.right {
-      justify-content: flex-end;
-    }
-    .tool-item {
-      display: inline-block;
-    }
-    .divider {
-      height: "100%";
-    }
+      &.left {
+        justify-content: flex-start;
+      }
+      &.center {
+        justify-content: center;
+      }
+      &.right {
+        justify-content: flex-end;
+      }
+      .tool-item {
+        display: inline-block;
+      }
+      .divider {
+        height: "100%";
+      }
+    
   }
 }
 </style>
