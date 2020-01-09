@@ -54,7 +54,7 @@
         }
       }
       .divider {
-        width: calc("100%");
+        width: "100%";
       }
     }
   }

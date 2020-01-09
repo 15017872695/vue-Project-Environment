@@ -26,6 +26,10 @@ import 'slider-verification-code/lib/slider-verification-code.css';
 // npm install -D script-loader
 import Blob from './assets/excel/Blob.js';
 import Export2Excel from './assets/excel/Export2Excel.js';
+
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
+
  
 Vue.use(SliderVerificationCode);
 
