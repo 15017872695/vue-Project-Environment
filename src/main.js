@@ -20,6 +20,7 @@ import utils from './global/utils';
 // npm i slider-verification-code --save 图片滑块验证码
 import SliderVerificationCode from 'slider-verification-code';
 import 'slider-verification-code/lib/slider-verification-code.css';
+Vue.use(SliderVerificationCode);
 
 // vue中使用excel导入导出，需要下载3个依赖包和2个js包
 // npm install -S file-saver xlsx（这里其实安装了2个依赖）
@@ -30,11 +31,11 @@ import Export2Excel from './assets/excel/Export2Excel.js';
 import VueParticles from 'vue-particles'
 Vue.use(VueParticles)
 
- 
-Vue.use(SliderVerificationCode);
+
 
 // 注册全局组件
 Vue.use(components)
+
 
 // 挂载 $X 命名空间
 Vue.prototype.$X = {
