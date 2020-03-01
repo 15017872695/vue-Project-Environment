@@ -10,7 +10,7 @@ const user = {
             state.token = newVale
         },
     },
-    actions: {
+    actions: { 
         // 登录
         LOGIN ({ commit }, userInfo) {  //用户通过dispatch去提交actions中的LOGIN方法，并且传入参数
             return new Promise((resolve, reject) => {

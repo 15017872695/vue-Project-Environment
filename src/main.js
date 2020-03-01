@@ -13,8 +13,12 @@ import wx from  'weixin-js-sdk';
 import echarts from 'echarts';
 import components from './global/components'
 
+
+
 import utils from './global/utils';
 // import './assets/css/main.less';
+
+import mixin from './mixin/toggle'
 
 
 // npm i slider-verification-code --save 图片滑块验证码
@@ -61,7 +65,7 @@ const i18nInstance = i18n(Vue, 'zh-CN')
 //   }
 // })
 
-Vue.use(element)
+Vue.use(element,mixin)
 
 config.baseURL;  // 对应环境api
 

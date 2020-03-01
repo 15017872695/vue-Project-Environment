@@ -5,12 +5,22 @@ import request from '@/utils/request';
 export default{
     // 登录
     login(data){
+        console.log(data)
         return request({
-            url:'',
-            method:'post',
+            url:'/user/login',
+            method:'GET',
+            params:data
+        })
+    },
+    //注册
+    register(data){
+        return request({
+            url:'/user/register',
+            method:'POST',
             data
         })
     },
+
     // 获取用户信息
     getUserInfo (){
         return request({
