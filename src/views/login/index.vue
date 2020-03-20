@@ -330,6 +330,9 @@ export default {
 .dialog-footer > button:nth-child(2) {
   margin-top: 0;
 }
+.el-button--default{
+  padding: 0 1vw;
+}
 </style>
 <style>
 .el-input-group__append,
