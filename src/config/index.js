@@ -1,17 +1,17 @@
 const modeUrlObj = {
     // 生产环境
     'production':{
-        baseURL:'http://localhost:3000/',
-        authBaseURL:''
+      baseURL:'http://xiaoyu.ysmgroup.cn:3000/',
+      authBaseURL:''
     },
     // 开发环境
     'development': {
-      baseURL: 'http://192.168.0.17:3000/',
+      baseURL: 'http://xiaoyu.ysmgroup.cn:3000/',
       authBaseURL: ''
     },
     // 测试环境
     'test': {
-      baseURL: 'http://192.168.0.17:3000/',
+      baseURL: 'http://xiaoyu.ysmgroup.cn:3000/',
       authBaseURL: ''
     }
 }

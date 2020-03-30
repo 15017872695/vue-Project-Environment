@@ -247,8 +247,9 @@ export default {
   },
   mounted() {
     this.$notification({
-      title: "系统消息",
-      message: "账号密码需自行运行服务端、配置MySQL获取",      iconClass: "el-icon-s-comment",
+      title: "博主哭诉消息提醒",
+      message: "由于博主资金链断裂，只租得起学生机！带宽极低  首次打开很慢！望谅解啊！！！！！",
+      iconClass: "el-icon-s-comment",
       duration: 0
     });
   }
@@ -258,7 +259,8 @@ export default {
 .login {
   width: 100%;
   height: 100%;
-  background: url("../../assets/img/loginBG.jpg") no-repeat;
+  background: url("https://static.runoob.com/images/mix/4781442-d6a8c2e5714b4c44.png")
+    no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -273,18 +275,29 @@ export default {
 
 .loginFrom {
   width: 400px;
-  height: auto;
+  height: 100%;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding-bottom: 10px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 100;
+  position: absolute;
+  left: 0;
 }
 
 .loginFromWapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 65px;
+}
+.dialog-footer {
+  display: flex;
+}
+.el-button--default {
+  width: 35%;
+  padding: 0;
 }
 .el-button--primary {
   width: 65%;
@@ -330,7 +343,7 @@ export default {
 .dialog-footer > button:nth-child(2) {
   margin-top: 0;
 }
-.el-button--default{
+.el-button--default {
   padding: 0 1vw;
 }
 </style>
