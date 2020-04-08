@@ -37,11 +37,11 @@
                         </a>
                         <a href="https://github.com/15017872695/vue-Project-Environment-.git" target="_blank">
                             <el-dropdown-item>项目仓库</el-dropdown-item>
-                        </a>
-                        <el-dropdown-item divided command="loginout">{{$t("common.exit")}}</el-dropdown-item>
+                        </a>                                       <!--{{$t("common.exit")}}-->       
+                        <el-dropdown-item divided command="loginout">退出</el-dropdown-item>
                     </el-dropdown-menu>
-                </el-dropdown>
-                <el-button type="primary" round style="margin-left:10px;" @click="changeLanguage">{{$t("common.toggle")}}</el-button>
+                </el-dropdown>                                                       <!--{{$t("common.toggle")}}-->
+                <el-button type="primary" round style="margin-left:10px;" @click="changeLanguage">切换语言</el-button>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
             return {
                 collapse: false,
                 fullscreen: false,
-                name: '小余',
+                name: '先森·女士',
                 message: 2
             }
 

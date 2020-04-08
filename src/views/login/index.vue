@@ -24,7 +24,11 @@
           <p class="login-tips">Tips : 登录去展开您的新世界吧。</p>
           <span @click="centerDialogVisible = true">注 册</span>
         </div>
+        <div class="beian">
+          <p class="login-tips"><a href="http://www.beian.miit.gov.cn">粤ICP备20013658号</a></p>
+        </div>
       </div>
+      
     </div>
     <vue-particles
       color="#dedede"
@@ -345,6 +349,14 @@ export default {
 }
 .el-button--default {
   padding: 0 1vw;
+}
+.beian{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
 }
 </style>
 <style>

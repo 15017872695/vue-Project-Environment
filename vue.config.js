@@ -58,5 +58,6 @@ module.exports = {
             'BMap':'BMap',
             'AMapUI':'AMapUI'
         },
-    }
+    },
+    productionSourceMap:false
 }

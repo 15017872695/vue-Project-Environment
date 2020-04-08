@@ -33,8 +33,8 @@
     </div>
     <el-col :span="24" style="height:7.5%;border-top:1px solid #eee;">
       <div class="grid-content bg-purple-dark bg-purple-darkTwo">
-        <span>本系统仅限于练习使用，禁止商业化</span>
-        <span>Vue项目环境配置标准版-后台管理系统©先森·余</span>
+        <span>个人学习开发项目-后台管理系统©先森·女士</span>
+        <span>本系统仅限于练习使用，禁止商业化！&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.beian.miit.gov.cn">粤ICP备20013658号</a></span>
       </div>
     </el-col>
   </div>
