@@ -13,7 +13,7 @@ export default {
   },
   components: {},
   methods: {},
-  created() {
+  created() {  
     this.$router.beforeEach((to, from, next) => {
       NProgress.start();
       next();

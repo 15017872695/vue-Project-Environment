@@ -103,7 +103,8 @@ export default {
       if (!value) {
         return callback(new Error("用户名不能为空"));
       }
-      setTimeout(() => {
+      // setTimeout(() => {
+        let newValue = /^[a-zA-Z0-9_-]{4,16}$/;
         if (!Number(value)) {
           callback(new Error("请输入用户名"));
         } else {
@@ -113,7 +114,7 @@ export default {
             callback();
           }
         }
-      }, 1000);
+      // }, 100);
     };
     var realName = (rule, value, callback) => {
       if (value === "") {
