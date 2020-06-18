@@ -175,6 +175,7 @@ export default {
       var myChartOne = this.$echarts.init(
         document.getElementsByClassName("echartsWapper")[0]
       );
+      myChartOne.resize();
       // console.log(myChartOne);
       var optionOne = {
         title: {

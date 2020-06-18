@@ -12,13 +12,6 @@
           <el-form-item>
             <el-button size="small" type="primary" @click="querySheet()">查询</el-button>
             <el-button class="operate-btn-color" plain @click="resetForm">重置</el-button>
-            <el-button
-              :icon="iconClass"
-              type="primary"
-              class="btn-arrow-tip"
-              plain
-              @click="showMoreQueryField = !showMoreQueryField"
-            />
           </el-form-item>
         </el-form>
       </el-card>
@@ -61,13 +54,15 @@
 </template>
 
 <script>
-// import ElButton from "@/components/ElementUI/button/index.js"
-// Vue.use(ElButton);
 export default {
+  // inject:['reload'],//注入依赖(暂未使用)
   data() {
     return {
       showBox: false,
       newTableData: [],
+      title:'',
+      name:'',
+      showMoreQueryField:false,
       tableData: [
         {
           date: "2016-05-02",
@@ -198,7 +193,11 @@ export default {
     hideBoxFNC() {
       this.showBox = false;
       clearTimeout(this.timeOutClose);
-    }
+    },
+    resetForm(){
+
+    },
+    
   }
 };
 </script>

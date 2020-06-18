@@ -135,7 +135,7 @@
                     {
                         icon: 'el-icon-collection-tag',
                         index: 'i18n',
-                        title: '国际化功能'
+                        title: '工单编辑'
                     },
                     {
                         icon: 'el-icon-warning-outline',

@@ -187,16 +187,16 @@
     }
 
     .tags-close-box {
-        border-radius:5px;
         box-sizing: border-box;
-        padding-top: 3px;
         margin-right: 10px;;
         text-align: center;
         width: 110px;
-        height: 41px;
-        background: #fff;
+        height: 100%;
+        background: #eee !important;
         box-shadow: -3px 0 15px 3px rgba(0, 0, 0, .1);
         z-index: 10;
+        display: flex;
+        align-items: center;
     }
 </style>
 <style>
