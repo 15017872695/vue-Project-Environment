@@ -8,6 +8,6 @@ export default {
     name:'dragComponent'
 }
 </script>
-<style scope>
+<style scoped>
 
 </style>

@@ -113,6 +113,11 @@
                         title: '地图定位'
                     },
                     {
+                        icon: 'el-icon-map-location',
+                        index: 'threeImage',
+                        title: 'Three.js全局场景图'
+                    },
+                    {
                         icon: 'el-icon-picture-outline-round',
                         index: 'echartsLiquidfill',
                         title: 'echarts水晶球'
@@ -128,7 +133,7 @@
                             },
                             {
                                 index: 'dialog',
-                                title: '拖拽弹框',
+                                title: '拖拽式自定义表单生成',
                             }
                         ]
                     },

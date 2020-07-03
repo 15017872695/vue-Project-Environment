@@ -5,18 +5,15 @@ import Router from 'vue-router'
 import i18n from './i18n'
 import store from './store/index';
 import * as Cookies from 'js-cookie'
-import config from './config/index';// 路径配置
+import config from './config/index'; // 路径配置
 import configTwo from './config/cookie'
-import 'element-ui/lib/theme-chalk/index.css';//ElementUI样式表
+import 'element-ui/lib/theme-chalk/index.css'; //ElementUI样式表
 import element from '../babel-plugin-component';
-import wx from  'weixin-js-sdk';
+import wx from 'weixin-js-sdk';
 import echarts from 'echarts';
 import components from './global/components'
 
-
-
 import utils from './global/utils';
-// import './assets/css/main.less';
 
 import mixin from './mixin/toggle'
 
@@ -43,15 +40,15 @@ Vue.use(components)
 
 // 挂载 $X 命名空间
 Vue.prototype.$X = {
-  utils,
-  configTwo,
-  Cookies
-}
-// i18n实例
+        utils,
+        configTwo,
+        Cookies
+    }
+    // i18n实例
 const i18nInstance = i18n(Vue, 'zh-CN')
 
 // 步骤一：安装vue-i18n
-  // npm install vue-i18n --save
+// npm install vue-i18n --save
 
 // 引入i18n国际化插件
 // import VueI18n from 'vue-i18n'
@@ -65,9 +62,9 @@ const i18nInstance = i18n(Vue, 'zh-CN')
 //   }
 // })
 
-Vue.use(element,mixin)
+Vue.use(element, mixin)
 
-config.baseURL;  // 对应环境api
+config.baseURL; // 对应环境api
 
 Vue.config.productionTip = false;
 
@@ -80,12 +77,12 @@ Vue.use(echarts);
 // vue router 报错： Uncaught (in promise) NavigationDuplicated {_name:""NavigationDuplicated"... 的解决方法
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err)
+    return originalPush.call(this, location).catch(err => err)
 }
 
 new Vue({
-  router,
-  store,
-  i18n:i18nInstance,
-  render: h => h(App)
+    router,
+    store,
+    i18n: i18nInstance,
+    render: h => h(App)
 }).$mount('#app')

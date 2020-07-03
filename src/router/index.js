@@ -118,6 +118,15 @@ const router = new Router({
                     },
                 },
                 {
+                    path: '/threeImage',
+                    name: 'threeImage',
+                    component: resolve => require(['@/views/home/threeImage'], resolve),
+                    meta: {
+                        title: 'Three.js全局场景图',
+                        needLogin: true, //是否需要登录权限
+                    },
+                }, ,
+                {
                     path: '/map',
                     name: 'map',
                     component: resolve => require(['@/views/home/map'], resolve),
@@ -171,7 +180,7 @@ const router = new Router({
                     name: 'dialog',
                     component: resolve => require(['@/views/home/dragComponent/dialog'], resolve),
                     meta: {
-                        title: '拖拽弹框',
+                        title: '拖拽式自定义表单生成',
                         keepAlive: true, // 需要被缓存
                         needLogin: true, //是否需要登录权限
                     },
