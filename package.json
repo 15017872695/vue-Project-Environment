@@ -26,7 +26,7 @@
     "mousetrap": "^1.6.3",
     "node-sass": "^4.13.1",
     "nprogress": "^0.2.0",
-    "quill": "^1.3.6",
+    "quill": "^1.3.7",
     "screenfull": "^5.0.0",
     "slider-verification-code": "^1.0.1",
     "v-viewer": "^1.4.2",
